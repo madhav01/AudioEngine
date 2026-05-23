@@ -3,7 +3,9 @@
 
 #include <QObject>
 #include <QQmlEngine>
-
+#include <QAudioSource>
+#include <QMediaDevices>
+#include <QIODevice>
 class AudioEngine : public QObject
 {
     Q_OBJECT
@@ -17,6 +19,9 @@ signals:
     void levelChanged();
 private:
     int m_level=0;
+
+    QAudioSource *m_audioSource = nullptr;
+    QIODevice *m_device = nullptr;
 };
 
 #endif // AUDIOENGINE_H

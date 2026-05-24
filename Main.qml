@@ -6,6 +6,8 @@ Window {
     visible: true
     title: qsTr("Audio Engine")
 
-
+    Dial{
+        anchors.centerIn: parent
+    }
 
 }
